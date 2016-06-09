@@ -18,7 +18,7 @@ class DefaultController extends Controller
     }
 
     /**
-     * @Route("/hello/{name}", name="greetings")
+     * @Route("/hello/{name}", name="greetings", defaults={"name":"world"})
      * @Template()
      */
     public function helloAction($name)
