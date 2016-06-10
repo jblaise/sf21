@@ -1,19 +1,17 @@
 <header>
-    <a href={{path('welcome')}}>Retour</a>
+    <a href={{path('welcome')}}>{{ 'nav.back' |trans }}</a>
 </header>
-<h1>Post creation</h1>
+<h1>{{ 'titles.create' |trans }}</h1>
 
 <form action="{{ path('post_admin_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}
     <p>
-        <button type="submit">Create</button>
+        <button type="submit">{{ 'crud.create' |trans }}</button>
     </p>
 </form>
 
 <ul class="record_actions">
     <li>
-        <a href="{{ path('post_admin') }}">
-            Back to the list
-        </a>
+        <a href="{{ path('post_admin') }}"> {{ 'crud.list' |trans }}</a>
     </li>
 </ul>

@@ -1,0 +1,15 @@
+titles:
+    list: post list
+    create: post create
+    show: post
+    edit: post edit
+properties:
+    id: id
+    title: title
+    slug: slug
+    content: content
+    date: date
+    actions: actions
+edit:
+    title: title
+    content: contenu

@@ -1,17 +1,17 @@
 <header>
-    <a href={{path('welcome')}}>Retour</a>
+    <a href={{path('welcome')}}>{{ 'nav.back' |trans }}</a>
 </header>
-<h1>Post list</h1>
+<h1>{{ 'titles.list' |trans({},'posts') }}</h1>
 
 <table class="records_list">
     <thead>
         <tr>
-            <th>Id</th>
-            <th>Title</th>
-            <th>Slug</th>
-            <th>Content</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th>{{ 'properties.id' |trans({}, 'posts') }}</th>
+            <th>{{ 'properties.title' |trans({}, 'posts') }}</th>
+            <th>{{ 'properties.slug' |trans({}, 'posts') }}</th>
+            <th>{{ 'properties.content' |trans({}, 'posts') }}</th>
+            <th>{{ 'properties.date' |trans({}, 'posts') }}</th>
+            <th>{{ 'properties.actions' |trans({}, 'posts') }}</th>
         </tr>
     </thead>
     <tbody>
@@ -25,13 +25,13 @@
             <td>
                 <ul>
                     <li>
-                        <a href="{{ path('post_admin_show', { 'id': entity.id }) }}">show</a>
+                        <a href="{{ path('post_admin_show', { 'id': entity.id }) }}"> {{ 'crud.show' |trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('post_admin_edit', { 'id': entity.id }) }}">edit</a>
+                        <a href="{{ path('post_admin_edit', { 'id': entity.id }) }}"> {{ 'crud.edit' |trans }}</a>
                     </li>
                     <li>
-                        <a href="{{ path('post_admin_delete', { 'id': entity.id }) }}">delete</a>
+                        <a href="{{ path('post_admin_delete', { 'id': entity.id }) }}"> {{ 'crud.delete' |trans }}</a>
                     </li>
                 </ul>
             </td>
@@ -42,8 +42,6 @@
 
 <ul>
     <li>
-        <a href="{{ path('post_admin_new') }}">
-            Create a new entry
-        </a>
+        <a href="{{ path('post_admin_new') }}"> {{ 'crud.create' |trans }}</a>
     </li>
 </ul>

@@ -1,0 +1,15 @@
+titles:
+    list: liste des articles
+    create: création d'un article
+    show: article
+    edit: édition de l'article
+properties:
+    id: identifiant
+    title: titre
+    slug: raccourci
+    content: contenu
+    date: date
+    actions: actions
+edit:
+    title: titre
+    content: contenu

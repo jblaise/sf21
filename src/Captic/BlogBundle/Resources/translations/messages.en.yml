@@ -1,0 +1,8 @@
+nav:
+    back: back
+crud:
+    create: create a new entry
+    show: show
+    list: back to the list
+    delete: delete
+    edit: edit
