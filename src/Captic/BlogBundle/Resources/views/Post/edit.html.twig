@@ -1,3 +1,6 @@
+<header>
+    <a href={{path('welcome')}}>Retour</a>
+</header>
 <h1>Post edit</h1>
 
 <form action="{{ path('post_admin_update', { 'id': entity.id }) }}" method="post" {{ form_enctype(edit_form) }}>
