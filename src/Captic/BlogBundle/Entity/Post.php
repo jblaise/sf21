@@ -3,6 +3,7 @@
 namespace Captic\BlogBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
 
 /**
  * Post
@@ -31,6 +32,7 @@ class Post
     /**
      * @var string
      *
+     * @Gedmo\Slug(fields={"title"}, updatable=false, separator="_")
      * @ORM\Column(name="slug", type="string", length=50)
      */
     private $slug;
@@ -45,6 +47,7 @@ class Post
     /**
      * @var \DateTime
      *
+     * @Gedmo\Timestampable(on="create")
      * @ORM\Column(name="date", type="datetime")
      */
     private $date;
@@ -151,4 +154,5 @@ class Post
     {
         return $this->date;
     }
+
 }
