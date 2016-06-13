@@ -1,7 +1,7 @@
 <header>
     <a href={{path('welcome')}}>{{ 'nav.back' |trans }}</a>
 </header>
-<h1>{{ 'titles.create' |trans }}</h1>
+<h1>{{ 'titles.create' |trans({},'posts') }}</h1>
 
 <form action="{{ path('post_admin_create') }}" method="post" {{ form_enctype(form) }}>
     {{ form_widget(form) }}

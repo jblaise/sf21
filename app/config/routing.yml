@@ -1,7 +1,14 @@
 captic_blog:
     resource: "@CapticBlogBundle/Controller/"
     type:     annotation
-    prefix:   /
+    prefix:   /{_locale}/
+
+captic_welcome:
+    pattern: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /fr/
+        permanent: true
 
 # Internal routing configuration to handle ESI
 # ****** WARNING ******
